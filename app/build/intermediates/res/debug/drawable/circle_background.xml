@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true">
+        <shape android:shape="oval">
+            <solid android:color="@color/secondary_text_default_material_dark"/>
+            <size android:height="24dp"
+                android:width="24dp"/>
+        </shape>
+    </item>
+
+    <item android:state_checked="false">
+        <shape android:shape="oval">
+            <stroke android:width="2dp" android:color="@color/secondary_text_default_material_dark"/>
+            <size android:height="24dp"
+                android:width="24dp"/>
+        </shape>
+    </item>
+
+</selector><!-- From: file:/H:/Workspace/MyApps/AlarmClock/app/src/main/res/drawable/circle_background.xml -->

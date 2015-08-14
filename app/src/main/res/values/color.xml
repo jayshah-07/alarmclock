@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name = "blue_grey_500">#607D8B</color>
+    <color name="blue_grey_700">#455A64</color>
+    <color name="blue_500">#2196F3</color>
+    <color name="blue_700">#1875D1</color>
+    <color name="indigo_900">#19227D</color>
+    <color name="morning_red_300">#E57373</color>
+    <color name="afternoon_light_blue_500">#03A9F4</color>
+    <color name="evening_teal_500">#009688</color>
+    <color name="night_indigo_500">#3F51B5</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="light_divider">#12FFFFFF</color>
+
+    <color name="white_50">#50FFFFFF</color>
+    <color name="blue_50">#702196F3</color>
+
+    <color name="white_30">#30FFFFFF</color>
+    <color name="yellow_500">#FFEB3B</color>
+    <color name="material_dark">#212121</color>
+</resources>

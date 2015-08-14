@@ -1,0 +1,285 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.matthew.alarmclock.DetailActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_height="56dp"
+        android:layout_width="match_parent"
+        android:minHeight="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="144dp"
+        android:background="?attr/colorPrimary">
+
+        <LinearLayout
+            android:id="@+id/time_selection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            android:clickable="true"
+            android:background="?android:attr/selectableItemBackground">
+
+            <TextView
+                android:id="@+id/alarm_time_hours"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:textSize="72sp"
+                android:textColor="@color/primary_text_default_material_dark"
+                android:text="12"/>
+
+            <TextView
+                android:id="@+id/alarm_time_min"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-thin"
+                android:textSize="72sp"
+                android:textColor="@color/primary_text_default_material_dark"
+                android:text="00"/>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/days_selection"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:orientation="horizontal"
+        android:weightSum="7"
+        android:background="?attr/colorPrimary"
+        android:padding="8dp">
+
+        <ToggleButton
+            android:id="@+id/toggle_mon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textOn="@string/details_mon"
+            android:textOff="@string/details_mon"
+            android:textSize="14sp"
+            android:textColor="@color/selector_togglebutton"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Button"
+            style="?android:attr/borderlessButtonStyle"
+            />
+
+        <ToggleButton
+            android:id="@+id/toggle_tue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textOn="@string/details_tue"
+            android:textOff="@string/details_tue"
+            android:textSize="14sp"
+            android:textColor="@color/selector_togglebutton"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Button"
+            style="?android:attr/borderlessButtonStyle"
+            />
+
+        <ToggleButton
+            android:id="@+id/toggle_wed"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textOn="@string/details_wed"
+            android:textOff="@string/details_wed"
+            android:textSize="14sp"
+            android:textColor="@color/selector_togglebutton"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Button"
+            style="?android:attr/borderlessButtonStyle"
+            />
+
+        <ToggleButton
+            android:id="@+id/toggle_thu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textOn="@string/details_thu"
+            android:textOff="@string/details_thu"
+            android:textSize="14sp"
+            android:textColor="@color/selector_togglebutton"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Button"
+            style="?android:attr/borderlessButtonStyle"
+            />
+
+        <ToggleButton
+            android:id="@+id/toggle_fri"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textOn="@string/details_fri"
+            android:textOff="@string/details_fri"
+            android:textSize="14sp"
+            android:textColor="@color/selector_togglebutton"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Button"
+            style="?android:attr/borderlessButtonStyle"
+            />
+
+        <ToggleButton
+            android:id="@+id/toggle_sat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textOn="@string/details_sat"
+            android:textOff="@string/details_sat"
+            android:textSize="14sp"
+            android:textColor="@color/selector_togglebutton"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Button"
+            style="?android:attr/borderlessButtonStyle"
+            />
+
+        <ToggleButton
+            android:id="@+id/toggle_sun"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textOn="@string/details_sun"
+            android:textOff="@string/details_sun"
+            android:textSize="14sp"
+            android:textColor="@color/selector_togglebutton"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Button"
+            style="?android:attr/borderlessButtonStyle"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="8dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="8dp"
+        android:background="@color/background_material_dark">
+
+        <!-- Alarm Name Option-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+
+            <ImageView
+                android:id="@+id/alarm_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="16dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_access_alarm"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="72dp"
+                android:layout_centerVertical="true">
+
+                <EditText
+                    android:id="@+id/alarm_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/details_alarm_name"
+                    android:textSize="16sp"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <!-- Weekly Option-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:paddingLeft="72dp"
+            android:paddingRight="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="@color/primary_text_default_material_dark"
+                android:textSize="16sp"
+                android:text="@string/details_weekly"/>
+
+            <CheckBox
+                android:id="@+id/checkbox_weekly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:paddingLeft="72dp"
+            android:background="@color/light_divider"/>
+
+        <!-- Melody Option-->
+
+        <RelativeLayout
+            android:id="@+id/melody_selection"
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+
+            <ImageView
+                android:id="@+id/melody_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="16dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_melody"/>
+
+            <TextView
+                android:id="@+id/melody_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="72dp"
+                android:layout_centerVertical="true"
+                android:textColor="@color/selector_textview"
+                android:textSize="16sp"
+                android:text="@string/details_temp_melody"/>
+
+        </RelativeLayout>
+
+        <!-- Vibrate Option-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:paddingLeft="72dp"
+            android:paddingRight="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="@color/primary_text_default_material_dark"
+                android:textSize="16sp"
+                android:text="@string/details_vibrate"/>
+
+            <CheckBox
+                android:id="@+id/checkbox_vibrate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

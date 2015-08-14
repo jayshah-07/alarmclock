@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Alarm Clock</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_save">Save</string>
+    <string name="action_delete">Delete</string>
+
+    <string name="title_activity_detail">DetailActivity</string>
+
+    <string name="details_mon">MON</string>
+    <string name="details_tue">TUE</string>
+    <string name="details_wed">WED</string>
+    <string name="details_thu">THU</string>
+    <string name="details_fri">FRI</string>
+    <string name="details_sat">SAT</string>
+    <string name="details_sun">SUN</string>
+
+    <string name="details_alarm_name">Alarm Name</string>
+    <string name="details_weekly">Repeat Weekly</string>
+    <string name="details_vibrate">Vibrate</string>
+    <string name="details_temp_melody">Birds Chirping</string>
+
+</resources>
