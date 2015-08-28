@@ -14,7 +14,7 @@ public class AlarmManagerHelper extends BroadcastReceiver{
 
     @Override
     public void onReceive(Context context, Intent intent) {
-
+        setAlarms(context);
     }
 
     public static void setAlarms(Context context){
@@ -26,7 +26,6 @@ public class AlarmManagerHelper extends BroadcastReceiver{
     }
 
     /*private static PendingIntent createPendingIntent(Context context, AlarmModel model){
-        Intent intent = new Intent(context, AlarmService.class);
-
+       return null;
     }*/
 }

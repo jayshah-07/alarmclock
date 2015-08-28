@@ -163,8 +163,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingTop="8dp"
-        android:background="@color/background_material_dark">
+        android:paddingTop="8dp">
 
         <!-- Alarm Name Option-->
 
@@ -209,7 +208,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:textColor="@color/primary_text_default_material_dark"
+                android:textColor="@color/primary_text_default_material_light"
                 android:textSize="16sp"
                 android:text="@string/details_weekly"/>
 
@@ -226,7 +225,7 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:paddingLeft="72dp"
-            android:background="@color/light_divider"/>
+            android:background="@color/dark_divider"/>
 
         <!-- Melody Option-->
 
@@ -267,7 +266,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:textColor="@color/primary_text_default_material_dark"
+                android:textColor="@color/primary_text_default_material_light"
                 android:textSize="16sp"
                 android:text="@string/details_vibrate"/>
 

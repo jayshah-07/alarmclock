@@ -238,7 +238,7 @@ public class MasterView extends ActionBarActivity{
 
         @Override
         public void onItemSelected() {
-            itemView.setBackgroundColor(Color.LTGRAY);
+            //itemView.setBackgroundColor(Color.LTGRAY);
         }
 
         @Override

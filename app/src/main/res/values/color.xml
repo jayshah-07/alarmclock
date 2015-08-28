@@ -12,6 +12,8 @@
 
     <color name="white">#FFFFFF</color>
     <color name="light_divider">#12FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="dark_divider">#12000000</color>
 
     <color name="white_50">#50FFFFFF</color>
     <color name="blue_50">#702196F3</color>
