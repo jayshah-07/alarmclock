@@ -9,6 +9,7 @@
         android:targetSdkVersion="21" />
 
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
         android:allowBackup="true"
@@ -39,6 +40,11 @@
         <service
             android:name="com.example.matthew.alarmclock.AlarmService"
             android:enabled="true" />
+
+        <activity
+            android:name="com.example.matthew.alarmclock.AlarmScreen"
+            android:label="@string/title_activity_alarm_screen" >
+        </activity>
     </application>
 
 </manifest>

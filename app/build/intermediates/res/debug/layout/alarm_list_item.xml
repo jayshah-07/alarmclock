@@ -50,7 +50,7 @@
                     android:textColor="?attr/colorPrimary"/>
 
                 <TextView
-                    android:id="@+id/alarm_name"
+                    android:id="@+id/alarm_screen_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
@@ -63,7 +63,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
-                    android:layout_below="@+id/alarm_name"
+                    android:layout_below="@+id/alarm_screen_name"
                     android:fontFamily="sans-serif-medium"
                     android:textSize="14sp"
                     android:textColor="@color/secondary_text_default_material_light"/>

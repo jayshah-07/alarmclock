@@ -186,7 +186,7 @@
                 android:layout_centerVertical="true">
 
                 <EditText
-                    android:id="@+id/alarm_name"
+                    android:id="@+id/alarm_screen_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:hint="@string/details_alarm_name"

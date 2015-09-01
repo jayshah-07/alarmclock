@@ -4,19 +4,14 @@ import android.app.Dialog;
 import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.media.RingtoneManager;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.DialogFragment;
-import android.support.v7.app.AlertDialog;
 import android.support.v4.app.NavUtils;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.app.AppCompatDialog;
 import android.support.v7.widget.Toolbar;
 import android.text.format.DateFormat;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -25,7 +20,6 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.ToggleButton;
 
-import java.sql.Time;
 import java.util.Calendar;
 
 
@@ -94,12 +88,16 @@ public class DetailActivity extends AppCompatActivity{
 
                     updateModelFromLayout();
 
+                    AlarmManagerHelper.cancelAlarms(getApplicationContext());
+
                     if(alarmDetails.id < 0 ){
                         dbHelper.createAlarm(alarmDetails);
                     }
                     else{
                         dbHelper.updateAlarm(alarmDetails);
                     }
+
+                    AlarmManagerHelper.setAlarms(getApplicationContext());
 
                     setResult(RESULT_OK);
                     finish();
@@ -135,7 +133,7 @@ public class DetailActivity extends AppCompatActivity{
         toggleFri = (ToggleButton) findViewById(R.id.toggle_fri);
         toggleSat = (ToggleButton) findViewById(R.id.toggle_sat);
         toggleSun = (ToggleButton) findViewById(R.id.toggle_sun);
-        alarmName = (EditText) findViewById(R.id.alarm_name);
+        alarmName = (EditText) findViewById(R.id.alarm_screen_name);
         checkBoxWeekly = (CheckBox) findViewById(R.id.checkbox_weekly);
 
         melodySelection = (RelativeLayout) findViewById(R.id.melody_selection);

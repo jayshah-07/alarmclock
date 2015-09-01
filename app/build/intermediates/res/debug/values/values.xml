@@ -367,11 +367,13 @@
     <string name="details_vibrate">Vibrate</string>
     <string name="details_wed">WED</string>
     <string name="details_weekly">Repeat Weekly</string>
+    <string name="hello_world">Hello world!</string>
     <!-- From: file:/H:/Workspace/MyApps/AlarmClock/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <string name="status_bar_notification_info_overflow">999+</string>
     <!-- From: file:/H:/Workspace/MyApps/AlarmClock/app/src/main/res/values/strings.xml -->
     <eat-comment/>
+    <string name="title_activity_alarm_screen">AlarmScreen</string>
     <string name="title_activity_detail">DetailActivity</string>
     <!-- From: file:/H:/Workspace/MyApps/AlarmClock/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>

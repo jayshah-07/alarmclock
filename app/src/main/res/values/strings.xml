@@ -18,5 +18,8 @@
     <string name="details_weekly">Repeat Weekly</string>
     <string name="details_vibrate">Vibrate</string>
     <string name="details_temp_melody">Birds Chirping</string>
+    <string name="title_activity_alarm_screen">AlarmScreen</string>
+
+    <string name="hello_world">Hello world!</string>
 
 </resources>

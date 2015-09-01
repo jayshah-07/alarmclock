@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.matthew.alarmclock" >
 
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +12,7 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name=".MasterView"
-            android:label="@string/app_name">
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,20 +22,23 @@
         <activity
             android:name=".DetailActivity"
             android:label="@string/title_activity_detail"
-            android:parentActivityName=".MasterView">
+            android:parentActivityName=".MasterView" >
         </activity>
 
-        <receiver android:name=".AlarmManagerHelper">
+        <receiver android:name=".AlarmManagerHelper" >
             <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
 
-        <service android:name=".AlarmService"
-            android:enabled="true"/>
+        <service
+            android:name=".AlarmService"
+            android:enabled="true" />
 
+        <activity
+            android:name=".AlarmScreen"
+            android:label="@string/title_activity_alarm_screen" >
+        </activity>
     </application>
-
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
 
 </manifest>

@@ -1,11 +1,10 @@
 package com.example.matthew.alarmclock;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.support.design.widget.FloatingActionButton;
-import android.support.v4.view.MotionEventCompat;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -19,23 +18,18 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CompoundButton;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 
 import com.example.matthew.alarmclock.swipetodismiss.ItemTouchHelperAdapter;
 import com.example.matthew.alarmclock.swipetodismiss.ItemTouchHelperViewHolder;
-import com.example.matthew.alarmclock.swipetodismiss.OnStartDragListener;
 import com.example.matthew.alarmclock.swipetodismiss.SimpleItemTouchHelperCallback;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 
-public class MasterView extends ActionBarActivity{
+public class MasterView extends AppCompatActivity {
 
     private RecyclerView mRecyclerView;
     private AlarmListAdapter mAdapter;
@@ -121,12 +115,17 @@ public class MasterView extends ActionBarActivity{
     }
 
     public void setAlarmEnabled(long id, boolean isEnabled){
+
+        AlarmManagerHelper.cancelAlarms(getApplicationContext());
+
         AlarmModel model = dbHelper.getAlarm(id);
         model.isEnabled = isEnabled;
         dbHelper.updateAlarm(model);
         //Refresh the adapter
         mAdapter.setAlarms(dbHelper.getAlarms());
         mAdapter.notifyDataSetChanged();
+
+        AlarmManagerHelper.setAlarms(getApplicationContext());
     }
 
     public void startAlarmDetailsActivity(long id) {
@@ -153,7 +152,7 @@ public class MasterView extends ActionBarActivity{
 
             mAlarmTimeHours = (TextView) v.findViewById(R.id.alarm_time_hours);
             mAlarmTimeMinutes = (TextView) v.findViewById(R.id.alarm_time_minutes);
-            mAlarmName = (TextView) v.findViewById(R.id.alarm_name);
+            mAlarmName = (TextView) v.findViewById(R.id.alarm_screen_name);
             mAlarmDays = (TextView) v.findViewById(R.id.alarm_days);
             mAlarmActive = (SwitchCompat) v.findViewById(R.id.alarm_active);
 
