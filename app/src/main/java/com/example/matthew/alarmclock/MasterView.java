@@ -1,10 +1,12 @@
 package com.example.matthew.alarmclock;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -138,8 +140,8 @@ public class MasterView extends AppCompatActivity {
     // (custom viewholder)
     private class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener, ItemTouchHelperViewHolder{
 
-        private TextView mAlarmTimeHours;
-        private TextView mAlarmTimeMinutes;
+        private CardView mCardView;
+        private TextView mAlarmTime;
         private TextView mAlarmName;
         private TextView mAlarmDays;
         private SwitchCompat mAlarmActive;
@@ -149,9 +151,8 @@ public class MasterView extends AppCompatActivity {
 
         public ViewHolder(View v) {
             super(v);
-
-            mAlarmTimeHours = (TextView) v.findViewById(R.id.alarm_time_hours);
-            mAlarmTimeMinutes = (TextView) v.findViewById(R.id.alarm_time_minutes);
+            mCardView = (CardView) v.findViewById(R.id.card_view);
+            mAlarmTime = (TextView) v.findViewById(R.id.alarm_time_hours);
             mAlarmName = (TextView) v.findViewById(R.id.alarm_screen_name);
             mAlarmDays = (TextView) v.findViewById(R.id.alarm_days);
             mAlarmActive = (SwitchCompat) v.findViewById(R.id.alarm_active);
@@ -195,9 +196,9 @@ public class MasterView extends AppCompatActivity {
             //Get string format value of time
             String hour = alarm.timeHour < 10 ? "0" + alarm.timeHour : String.valueOf(alarm.timeHour);
             String min = alarm.timeMinute < 10 ? "0" + alarm.timeMinute : String.valueOf(alarm.timeMinute);
+            String time = hour + ":" + min;
 
-            mAlarmTimeHours.setText(hour);
-            mAlarmTimeMinutes.setText(min);
+            mAlarmTime.setText(time);
 
             mAlarmName.setText(alarm.name);
 
@@ -230,14 +231,13 @@ public class MasterView extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            Toast.makeText(getApplicationContext(), String.valueOf(itemView.getTag()), Toast.LENGTH_LONG).show();
             startAlarmDetailsActivity(((Long) itemView.getTag()).longValue());
 
         }
 
         @Override
         public void onItemSelected() {
-            //itemView.setBackgroundColor(Color.LTGRAY);
+            //mCardView.setCardBackgroundColor(Color.LTGRAY);
         }
 
         @Override
